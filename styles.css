@@ -1,0 +1,142 @@
+:root{
+    --light-color: #E5FCC2;
+    --mid-light-color: #9DE0AD;
+    --mid-color: #45ADA8;
+    --mid-dark-color: #547980;
+    --dark-color: #594F4F;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #ffffff;
+    color: #ffffff;
+
+}
+a{
+    display: block;
+    width: 155px;
+    height: 155px;
+    color: #ffffff;
+}
+a:hover{
+    color: var(--dark-color);
+    background-color: #fff;
+}
+
+#container-grid{
+    display: grid;
+    grid-template-columns: repeat(6, 75px);
+    grid-template-rows: repeat(6, 75px);
+    grid-gap: 5px;
+    width: 475px;
+    height: 475px;
+    margin: 15vh auto;
+}
+#container-grid div{
+    border-radius: 3px;
+}
+
+#mail-box{
+    grid-column: 1/3;
+    grid-row: 1/3;
+    background-color: var(--light-color);
+}
+#ln-box{
+    grid-column: 1/3;
+    grid-row: 3/5;
+    background-color: var(--mid-light-color);
+}
+#gh-box{
+    grid-column: 1/3;
+    grid-row: 5/7;
+    background-color: var(--mid-color);
+}
+#bio-box{
+    grid-column: 3/7;
+    grid-row: 1/3;
+    background-color: var(--mid-dark-color);
+    text-align: center;
+    font-size: 2.5em;
+    padding-top: 55px;
+}
+#about-box{
+    grid-column: 3/7;
+    grid-row: 3/5;
+    background-color: var(--dark-color);
+    padding: 15px;
+}
+#skills-box{
+    grid-column: 5/7;
+    grid-row: 5/7;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.boxStyle{
+    background-color: #fff;
+}
+.icon{
+    font-size: 5em;
+    margin: 40px;
+}
+
+@media screen and (max-width: 360px) {
+    body{
+        margin: 5px;
+    }
+    a{
+        width: 113px;
+        height: 113px;
+    }
+
+    #container-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 113px);
+        grid-template-rows: repeat(6, 113px);
+        grid-gap: 5px;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+
+    #mail-box{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    #ln-box{
+        grid-column: 2/3;
+        grid-row: 1/2;
+
+    }
+    #gh-box{
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    #bio-box{
+        grid-column: 1/4;
+        grid-row: 2/3;
+        padding-top: 30px;
+    }
+    #about-box{
+        grid-column: 1/4;
+        grid-row: 3/5;
+        font-size: 21px;
+    }
+    #skills-box{
+        grid-column: 1/4;
+        grid-row: 5/7;
+        font-size: 24px;
+    }
+    .icon{
+        margin: 18px;
+    }
+}
